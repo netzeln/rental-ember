@@ -1,12 +1,17 @@
 <h2>Add an Announcement</h2>
-<form>
-  <label for="title">Title:</label>
-  {{input value=title id="title"}}
-  <label for="type">Type:</label>
-  {{input value=type id="type"}}
-  <label for="date">Date:</label>
-  {{input type="date" value=date id="date"}}
-  <label for="body">Body:</label>
-  {{input value=body id="body"}}
-  <button {{action 'createAnnouncement'}}>Add Announcement</button>
-</form>
+
+{{#if isAnnouncementFormShowing }}
+  <form>
+    <label for="title">Title:</label>
+    {{input value=title id="title"}}
+    <label for="type">Type:</label>
+    {{input value=type id="type"}}
+    <label for="date">Date:</label>
+    {{input type="date" value=date id="date"}}
+    <label for="body">Body:</label>
+    {{input value=body id="body"}}
+    <button {{action 'createAnnouncement'}}>Add Announcement</button>
+  </form>
+{{ else }}
+  <button {{action 'showAnnouncementForm'}}>Create New Announcement</button>
+{{/if}}

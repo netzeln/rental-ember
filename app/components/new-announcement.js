@@ -1,6 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
+  isAnnouncementFormShowing: false,
   actions: {
     createAnnouncement() {
       var params = {
@@ -9,8 +10,17 @@ export default Ember.Component.extend({
         date: this.get('date'),
         body: this.get('body')
       };
-      console.log(params);
+
+      this.set('isAnnouncementFormShowing', false);
       this.sendAction('sendCreateAnnouncement', params);
+      this.set('title', "");
+      this.set('date', "");
+      this.set('type', "");
+      this.set('body', "");
+    },
+
+    showAnnouncementForm() {
+      this.set('isAnnouncementFormShowing', true);
     }
   }
 
