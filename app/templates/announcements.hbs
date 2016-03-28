@@ -1,9 +1,4 @@
 <h1>Announcements</h1>
 {{#each model as |announcement|}}
-  <div>
-    <h3>{{announcement.title}}</h3>
-    <h5>{{announcement.date}}</h5>
-    <p>{{announcement.body}}</p>
-    <p>File under: {{announcement.type}}</p>
-  </div>
+  {{announcement-tile announcement=announcement}}
 {{/each}}

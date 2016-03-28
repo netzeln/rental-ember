@@ -1,0 +1,8 @@
+<div>
+  <h3 {{action 'showBody'}}>{{announcement.title}}</h3>
+  <h5>{{announcement.date}}</h5>
+  <p>File under: {{announcement.type}}</p>
+  {{#if isBodyShowing }}
+  <p>{{announcement.body}}</p>
+  {{/if}}
+</div>
