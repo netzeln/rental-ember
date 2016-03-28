@@ -10,6 +10,11 @@ export default Ember.Component.extend({
     } else {
       this.set('isBodyShowing', true);
     }
-  }
+  },
+    delete(announcement){
+      if(confirm('Do you Want to Delete this Announcment?')) {
+        this.sendAction('deleteAnnouncement', announcement);
+      }
+    }
   }
 });
