@@ -1,9 +1,13 @@
-<div>
-  <h3 {{action 'showBody'}}>{{announcement.title}}</h3>
-  <h5>{{announcement.date}}</h5>
-  <p>File under: {{announcement.type}}</p>
-  {{#if isBodyShowing }}
-  <p>{{announcement.body}}</p>
-  {{/if}}
-  <button {{action 'delete' announcement}}>Delete</button>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title" {{action 'showBody'}}>{{announcement.title}}</h3>
+  </div>
+  <div class="panel-body">
+    <h5>{{announcement.date}}</h5>
+    <p>File under: {{announcement.type}}</p>
+    {{#if isBodyShowing }}
+    <p>{{announcement.body}}</p>
+    {{/if}}
+    <button class="btn btn-warning btn-xs"{{action 'delete' announcement}}>Delete</button>
+  </div>
 </div>

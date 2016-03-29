@@ -3,9 +3,9 @@
 {{#if isAnnouncementFormShowing }}
   <form>
     <label for="title">Title:</label>
-    {{input value=title id="title"}}
+    {{input class="form-control" value=title id="title"}}
     <label for="type">Type:</label>
-    {{#x-select value=type action="selectType"}}
+    {{#x-select class="form-control" value=type action="selectType"}}
       {{#x-option value="News"}}News{{/x-option}}
       {{#x-option value="Sale"}}Sale{{/x-option}}
       {{#x-option value="Weather"}}Weather{{/x-option}}
@@ -17,13 +17,13 @@
       <option value="Weather" >Weather</option>
     </select> -->
     <label for="date">Date:</label>
-    {{input type="date" value=date id="date"}}
+    {{input class="form-control" type="date" value=date id="date"}}
     <label for="body">Body:</label>
-    {{input value=body id="body"}}
-    <button {{action 'createAnnouncement'}}>Add Announcement</button>
+    {{input class="form-control" value=body id="body"}}
+    <button class="btn btn-primary" {{action 'createAnnouncement'}}>Add Announcement</button>
   </form>
 {{ else }}
-  <button {{action 'showAnnouncementForm'}}>Create New Announcement</button>
+  <button class="btn btn-lg btn-success" {{action 'showAnnouncementForm'}}>Create New Announcement</button>
 {{/if}}
 
 

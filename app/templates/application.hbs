@@ -1,3 +1,19 @@
+<header class="jumbotron">
+  <h1>Super Rentals</h1>
+</header>
 
+<div class="container">
+  {{outlet}}
+</div>
 
-{{outlet}}
+<footer>
+  <nav class="navbar navbar-default navbar-fixed-bottom">
+    <ul class="nav nav-pills">
+      <li role="presentation">{{#link-to 'about'}}About{{/link-to}}</li>
+      <li role="presentation">{{#link-to 'index'}}Home{{/link-to}}</li>
+      <li role="presentation">{{#link-to 'contact'}}Contact{{/link-to}}</li>
+      <li role="presentation">{{#link-to 'announcements'}}Announcements{{/link-to}}</li>
+    </ul>
+  </nav>
+
+</footer>

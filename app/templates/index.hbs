@@ -1,14 +1,15 @@
 <h1>Welcome to Super Rentals!</h1>
 
 <p>We hope you find exactly what you're looking for in a place to stay.</p>
-<ul>
-  {{#each model as |rental|}}
-    {{rental-tile rental=rental destroyRental="destroyRental" update="update"}}
-  {{/each}}
-</ul>
-
-{{new-rental save2="save3"}}
-
-{{#link-to 'about'}}About{{/link-to}}
-{{#link-to 'contact'}}Contact{{/link-to}}
-{{#link-to 'announcements'}}Announcements{{/link-to}}
+<div class="row">
+  <div class="col-sm-6">
+    <ul class="list-group">
+      {{#each model as |rental|}}
+        {{rental-tile rental=rental destroyRental="destroyRental" update="update"}}
+      {{/each}}
+    </ul>
+  </div>
+  <div class="col-sm-6">
+    {{new-rental save2="save3"}}
+  </div>
+</div>

@@ -1,11 +1,13 @@
 <h1>Announcements</h1>
+<br>
+<div class="row">
+  <div class="col-sm-8">
+    {{#each model as |announcement|}}
+      {{announcement-tile announcement=announcement deleteAnnouncement="deleteAnnouncement"}}
+    {{/each}}
+  </div>
+  <div class="col-sm-4">
+    {{new-announcement sendCreateAnnouncement="saveAnnouncement"}}
 
-{{new-announcement sendCreateAnnouncement="saveAnnouncement"}}
-
-{{#each model as |announcement|}}
-  {{announcement-tile announcement=announcement deleteAnnouncement="deleteAnnouncement"}}
-{{/each}}
-
-{{#link-to 'index'}}Home{{/link-to}}
-{{#link-to 'about'}}About{{/link-to}}
-{{#link-to 'contact'}}Contact Us{{/link-to}}
+  </div>
+</div>
