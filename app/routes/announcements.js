@@ -13,7 +13,7 @@ export default Ember.Route.extend({
       this.transitionTo('announcements');
     },
     deleteAnnouncement(announcement) {
-      announcement.destroyRecord(), //destroyRecord is it's own special thing
+      announcement.destroyRecord(); //destroyRecord is it's own special thing
       this.transitionTo('announcements');
     }
   }
