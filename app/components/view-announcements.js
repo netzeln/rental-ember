@@ -7,9 +7,8 @@ export default Ember.Component.extend({
       this.set('thing', choice);
       console.log('filtered in parent');
       console.log(this.thing);
-      ///
-      // this.transitionTo('announcements');
     },
+
     sendAnnouncement(params) {
       this.sendAction("sendSaved", params);
     },

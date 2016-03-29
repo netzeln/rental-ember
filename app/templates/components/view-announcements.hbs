@@ -1,7 +1,9 @@
 <div class="row">
   <div class="col-sm-8">
     {{#each model as |announcement|}}
-      {{announcement-tile announcement=announcement thing=thing deleteAnnouncement="deleteAnnouncement"}}
+      {{#if (filtering-posts announcement thing)}}
+        {{announcement-tile announcement=announcement deleteAnnouncement="deleteAnnouncement"}}
+      {{/if}}
     {{/each}}
   </div>
   <div class="col-sm-4">
