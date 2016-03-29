@@ -1,0 +1,13 @@
+<div class="row">
+  <div class="col-sm-8">
+    {{#each model as |announcement|}}
+      {{announcement-tile announcement=announcement thing=thing deleteAnnouncement="deleteAnnouncement"}}
+    {{/each}}
+  </div>
+  <div class="col-sm-4">
+    {{new-announcement sendCreateAnnouncement="sendAnnouncement"}}
+    <hr>
+    <h3>Filter Announcement</h3>
+    {{filter-announcements announcement=announcement sendFilterType="setFilter"}}
+  </div>
+</div>

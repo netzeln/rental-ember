@@ -6,6 +6,8 @@ export default Ember.Component.extend({
   actions: {
     selectType() {
       this.set('typeOfThing', this.get('type'));
+      console.log('selected type!');
+      console.log(this.typeOfThing);
 
     },
     createAnnouncement() {
