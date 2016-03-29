@@ -2,8 +2,14 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
   isAnnouncementFormShowing: false,
+  typeOfThing: null,
   actions: {
+    selectType() {
+      this.set('typeOfThing', this.get('type'));
+
+    },
     createAnnouncement() {
+
       var params = {
         title: this.get('title'),
         type: this.get('type'),

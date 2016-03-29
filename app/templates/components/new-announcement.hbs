@@ -5,7 +5,17 @@
     <label for="title">Title:</label>
     {{input value=title id="title"}}
     <label for="type">Type:</label>
-    {{input value=type id="type"}}
+    {{#x-select value=type action="selectType"}}
+      {{#x-option value="News"}}News{{/x-option}}
+      {{#x-option value="Sale"}}Sale{{/x-option}}
+      {{#x-option value="Weather"}}Weather{{/x-option}}
+    {{/x-select}}
+
+    <!-- <select {{ action 'selectType' (mut value) on='change' value="target.value" }}>
+      <option value="Sale" >Sale</option>
+      <option value="News" >News</option>
+      <option value="Weather" >Weather</option>
+    </select> -->
     <label for="date">Date:</label>
     {{input type="date" value=date id="date"}}
     <label for="body">Body:</label>
@@ -15,3 +25,8 @@
 {{ else }}
   <button {{action 'showAnnouncementForm'}}>Create New Announcement</button>
 {{/if}}
+
+
+
+
+<!-- {{input value=type id="type"}} -->
