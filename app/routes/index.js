@@ -9,6 +9,11 @@ export default Ember.Route.extend({
       rentals: this.store.findAll('rental')
     });
   },
-
-  
+  actions: {
+    save(params) {
+      var newCity = this.store.createRecord('city', params);
+      newCity.save();
+      this.transitionTo('index');
+    }
+  }
 });

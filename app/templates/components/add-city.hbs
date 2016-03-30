@@ -1,0 +1,8 @@
+<form>
+  <label for="name">City</label>
+  {{input value=name id="name"}}
+  <label for="country">Country</label>
+  {{input value=country id="country"}}
+  <br>
+  <button class="btn btn-success" {{action 'saveCity' city}}>Submit</button>
+</form>
