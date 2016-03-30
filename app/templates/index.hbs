@@ -4,7 +4,7 @@
 <div class="row">
   <div class="col-sm-6">
     <ul class="list-group">
-      {{#each model as |rental|}}
+      {{#each model.rentals as |rental|}}
         {{rental-tile rental=rental destroyRental="destroyRental" update="update"}}
       {{/each}}
     </ul>
@@ -12,4 +12,11 @@
   <div class="col-sm-6">
     {{new-rental save2="save3"}}
   </div>
+
+  <h2>Cities</h2>
+  <ul>
+    {{#each model.cities as |city|}}
+      <li>{{city.name}}</li>
+    {{/each}}
+  </ul>
 </div>
