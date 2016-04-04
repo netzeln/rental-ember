@@ -4,9 +4,11 @@
 <div class="row">
   <div class="col-sm-6">
     <ul class="list-group">
-      {{#each model.rentals as |rental|}}
+      {{rentals-list model=model}}
+      <!-- {{#each sortedRentals2 as |rental|}}
         {{rental-tile rental=rental destroyRental="destroyRental" update="update"}}
-      {{/each}}
+      {{/each}} -->
+
     </ul>
   </div>
   <div class="col-sm-6">
